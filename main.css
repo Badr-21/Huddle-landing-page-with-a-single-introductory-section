@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    /*## Colors
+    ### Primary*/
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+body {
+    width: 100xw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--Violet);
+    overflow: hidden;
+}
+
+.container {
+    width: 100vw;
+    max-height: 100vh;
+    padding: 2rem 4rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container .logo {
+    width: 100vw
+}
+
+.container .logo img {
+    width: 10rem;
+}
+
+.container .illustration {
+    width: 50vw;
+    margin-top: 3rem;
+}
+
+.container .illustration img {
+    width: 40rem;
+}
+
+.container .text {
+    width: 40vw;
+    margin-top: 3.5rem;
+}
+
+.container .text h1 {
+    width: 26rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    color: white;
+}
+
+.container .text p {
+    width: 29rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+
+button {
+    padding: 1rem 3.5rem;
+    color: var(--Violet);
+    border-radius: 2rem;
+    border: none;
+    box-shadow: .1rem .1rem 0.5rem rgba(0, 0, 0, 0.6) ;
+}
+
+button:hover {
+    color: white;
+    background-color: var(--Soft-Magenta);
+    cursor: pointer;
+}
+
+footer {
+    margin: 0 4rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer div {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+    color: white;
+    border-radius: 50%;
+    border: .1rem solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer div:hover {
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+    cursor: pointer;
+}
+
+footer div i {
+    position: absolute;
+}
+
+@media (max-width: 375px) {
+
+    body {
+        background-image: url(images/bg-mobile.svg);
+        background-size: contain;
+        overflow-y: visible;
+    }
+
+    .container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 2rem;
+    }
+
+    .container .logo {
+        width: 100vw
+    }
+    
+    .container .logo img {
+        width: 10rem;
+    }
+
+    .container .illustration {
+        width: 100vw;
+        margin: 2.8rem 0 0 0;
+    }
+    
+    .container .illustration img {
+        width: 19rem;
+    }
+
+    .container .text {
+        width: calc(100vw - 4rem);
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .container .text h1 {
+        width: 80vw;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+    }
+    
+    .container .text p {
+        width: 82vw;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+    }
+
+    button {
+        margin: 1rem auto;
+        padding: 1rem 5rem;
+    }
+
+    footer {
+        margin: 1.5rem 0 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    footer div {
+        width: 2rem;
+        height: 2rem;
+        margin-left: .6rem;
+        color: white;
+        border-radius: 50%;
+        border: .1rem solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
